@@ -1,0 +1,33 @@
+
+//sass --watch assets/css/scss/pages/topcamisas2023.scss:assets/css/topcamisas2023.min.css
+
+$vitrine-blue: #192C53;
+$vitrine-gray: #747474;
+$color-text:#FFF;
+$color-text-secundary:#DEA95C;
+$color-primary:#000;
+$color-secundary:#DEA95C;
+
+//@import "../_lib/progressive.css";
+
+@import "../components/reset-tray";
+
+
+@import "../fonts/gotham-book";
+@import "../fonts/gotham-medium";
+@import "../fonts/gotham-bold";
+@import "../fonts/gotham-black";
+@import "../fonts/sporty";
+
+@import "../components/variables";
+
+@import "top-camisas-2023/home";
+@import "top-camisas-2023/instruction";
+@import "top-camisas-2023/shirt_year";
+@import "top-camisas-2023/modalSeemore";
+@import "top-camisas-2023/modalVote";
+
+@import "../fonts/icons-font";
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}

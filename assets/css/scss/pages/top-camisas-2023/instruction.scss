@@ -1,0 +1,79 @@
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+.c-step{
+    background-color: #222222; 
+    padding: 60px 0px;
+
+    .img-step{
+        
+        img{
+           height:  100%;
+            object-fit: contain;
+            width: auto;
+            width: 100%;
+        }
+    }
+    .row{
+        background-color: #222222  ;
+        border: 1px solid #323131;
+        justify-content: space-around;
+    }
+    .col-content{
+        padding: 30px 0px;
+        min-height: 60vh;
+    }
+    h1{
+        color: $color-text;
+        font-size: 28px;
+        letter-spacing: -1px;
+        font-style: italic;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .slick__step{
+        .item{
+            position: relative;
+            padding: 48px 32px 48px 0px;
+            height: 200px;
+
+            &::before{
+                content: '';
+                background-color: $color-secundary;
+                height: 2px;
+                width: 20%;
+                position: absolute;
+                bottom:0px;
+                left:0px;
+            }
+
+            h2{
+                color: $color-text-secundary;
+                font-style: italic;
+                font-size: 25px;
+                font-weight: 600;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 300;
+                color: $color-text;
+            }
+        }
+    }
+    .payment{
+        background-color: #323131;
+        padding: 20px 0px;
+
+        p{
+            color: $color-text;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 350;
+
+             strong{
+                font-weight: 600;
+             }
+        }
+    }
+}

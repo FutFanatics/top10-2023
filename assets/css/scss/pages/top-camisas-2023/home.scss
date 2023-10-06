@@ -1,0 +1,48 @@
+
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+
+p{
+    margin-bottom: 0px;
+}
+.c-home{
+    background-image: url('../../../../../img/home/banner-home.png');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+
+    @include md{
+        padding: 0px;
+    }
+        
+}
+.c-hour{
+    background: url('../../../../../img/home/banner-inf.png'), #222222;
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    h1{
+        color: $color-text;
+        font-size: 28px;
+        letter-spacing: -1px;
+        font-style: italic;
+        font-weight: 600;
+    }
+    p{
+        color: $color-text;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+
+        strong{
+            font-weight: 600;
+        }
+    }
+
+}

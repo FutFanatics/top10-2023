@@ -1,6 +1,8 @@
 (function($){
 
 	var containerinstruction= $('.instruction__slick')
+	var containerstep= $('.slick__step')
+
 
 	containerinstruction.slick({
 		autoplay: false,
@@ -22,6 +24,27 @@
 			
 			}]
 	});
+	containerstep.slick({
+		autoplay: false,
+		autoplaySpeed: 4000,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		arrows: false,
+		dots: false,
+		adaptiveHeight: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+
+						}
+			
+			}]
+	});
+
 
 	function copyToClipboard(element) {
 		var $temp = $("<input>");
