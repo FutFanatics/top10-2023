@@ -1045,8 +1045,8 @@ p {
 }
 
 .c-home {
-  background-image: url("../../../../../img/home/banner-home.png");
-  height: 60vh;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/banner-home.png");
+  height: 70vh;
   background-position: center;
   background-size: cover;
 }
@@ -1057,8 +1057,8 @@ p {
 }
 
 .c-hour {
-  background: url("../../../../../img/home/banner-inf.png"), #222222;
-  height: 25vh;
+  background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/banner-inf.png"), #222222;
+  height: 20vh;
   background-position: center;
   background-size: cover;
   display: flex;
