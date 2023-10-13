@@ -396,13 +396,13 @@
 					var votos = data.data.votos;
 					var totalVotos = data.data.total;
 					
-					// Iterar pelos votos e exibir na página
+					
 					$.each(votos, function (index, item) {
 						var nome = item.nome;
 						var votos = item.votos;
 						var porcentagem = (votos / totalVotos) * 100;
 
-						// Criar um novo elemento para cada par nome-porcentagem
+						
 						var newItem = $("<div class='col-4 card-ranking d-flex'>"
                                 + "<h1 class='ranking-number'>#" + (index + 1) + "</h1>"
                                 + "<h1 class='ranking-name'>" + nome + "</h1>"
@@ -413,17 +413,16 @@
                                 + "</div>"
                                 + "</div>");
 
-								// Obtenha a porcentagem desejada (por exemplo, 50%)
+								
 							var porcentagem = 50;
 
-							// Calcule o ângulo a ser usado para preencher o círculo
+							
 							var anguloPreenchimento = (360 * porcentagem) / 100;
 
-							// Defina o valor da variável CSS --border-fill com base no ângulo de preenchimento
 							document.documentElement.style.setProperty('--border-fill', anguloPreenchimento + 'deg');
 
 
-						// Adicionar o novo elemento à página
+						
 						$(".row-ranking").append(newItem);
 					});
 				} else {
