@@ -1,0 +1,8 @@
+
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+
+.c-modal-shirt{
+    
+}

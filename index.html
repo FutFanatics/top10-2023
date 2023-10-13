@@ -78,7 +78,7 @@
                             <button class="shirt-fav" data-image="https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/shirt/card.png"></button>
                             <div class="shirt-content">
                                 <h1>Puma Manchester City</h1>
-                                <a>Ver mais</a>
+                                <a class="more-content" data-toggle="modal" data-target="#shirtModal" data-index="0">Ver mais</a>
                             </div>
                         </div>
                         <div class="shirt-card">
@@ -86,7 +86,7 @@
                             <button class="shirt-fav" data-image="https://imagens.brasil.elpais.com/resizer/-1mspOb-5t01cqycmWVyzphze2c=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/WQGOZS5S7D3DCLWMVVJM7S5VAQ.jpg"></button>
                             <div class="shirt-content">
                                 <h1>Puma Manchester City</h1>
-                                <a>Ver mais</a>
+                                <a class="more-content" data-toggle="modal" data-target="#shirtModal" data-index="1">Ver mais</a>
                             </div>
                         </div>
                         <div class="shirt-card">
@@ -415,7 +415,20 @@
             </div>
         </div>
     </div>
+    <div class="modal fade c-modal-shirt" id="shirtModal" tabindex="-1" role="dialog" aria-labelledby="shirtModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body" >
+                    <div class="content-modal row" id="modal-data">
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

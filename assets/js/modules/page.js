@@ -435,5 +435,40 @@
 		});
 	});
 
+	// Array de objetos de exemplo
+        const objetos = [
+            {
+                nome: "Puma Manchester City",
+                descricao: "Descrição do produto 1.",
+                preco: "R$ 99,99"
+            },
+            {
+                nome: "Adidas Real Madrid",
+                descricao: "Descrição do produto 2.",
+                preco: "R$ 79,99"
+            }
+            // Adicione mais objetos conforme necessário
+        ];
+
+        // Event listener para abrir o modal
+        $(".more-content").on("click", function() {
+            const target = $(this).data("index");
+            renderModal(objetos[target]);
+        });
+
+        // Função para renderizar os dados do objeto no modal
+        function renderModal(objeto) {
+            $("#modal-data").html(`
+				<div class='col-6 col-img '>
+				<img class='img-modal'/>
+				</div>
+				<div class='col-6'>			
+                <h2>${objeto.nome}</h2>
+                <p>${objeto.descricao}</p>
+                <p>Preço: ${objeto.preco}</p>
+				</div>
+                <!-- Adicione mais campos conforme necessário -->
+            `);
+        }
 })(jQuery);
 
