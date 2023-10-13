@@ -1,0 +1,67 @@
+
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+:root {
+    --border-fill: 0; /* Defina um valor padrão inicial */
+  }
+.c-ranking{
+    background-color: #222222;
+    padding: 60px 0px;
+
+    .card-ranking{
+        border: 2px solid var(--Cinza-Claro, #323131);
+        background: linear-gradient(90deg, #484848 0.06%, #181716 100.06%);
+        padding: 16px 32px;
+        margin: 0px 16px;
+        align-items: center;
+
+        .ranking{
+            &-number{
+                color:#DCB16D;
+                padding-right: 16px;
+                font-style: italic;
+                font-family: 'gotham';
+                font-size: 30px;
+            }
+            &-name{
+                color: #FFF;
+                font-size: 18px;
+            }
+        }
+        .ranking-percent {
+            width: 100px; /* Defina o tamanho do círculo */
+            height: 100px;
+            background-color: transparent; /* Cor de fundo do círculo */
+            border-radius: 50%; /* Torna o elemento um círculo */
+            position: relative; /* Para ajustar a rotação do preenchimento */
+        }
+
+        .percent-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent; /* Cor de fundo do círculo */
+            border-radius: 50%; /* Torna o elemento um círculo */
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            border: 5px solid transparent; /* Borda circular vazia */
+        }
+
+        .percent-fill {
+            /* ... outros estilos ... */
+            transform: rotate(var(--border-fill));
+          }
+
+        .percent-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centralize o texto verticalmente e horizontalmente */
+            font-size: 18px;
+            color: white;
+        }
+
+    }
+}
