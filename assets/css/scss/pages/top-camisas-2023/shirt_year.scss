@@ -89,14 +89,29 @@
         &-card{
             padding: 0px;
             width: 20%;
-            height: 320px;
+            height: 330px;
             position: relative;
             margin-right: 16px;
+            overflow: hidden;
+            cursor: pointer;
 
             img{
                 width: 100%;
                 object-fit: cover;
                 height: 100%;
+                position: relative;
+                top: -50%;
+                transform: translateY(50%);
+            }
+
+            &:hover{
+                border: 1px solid #DCB16D;
+
+                img{
+                    transform: scale(1.15);
+                    top: 0%;
+                }
+                
             }
         }
         &-content{
@@ -141,6 +156,8 @@
             top: 8px;
             right: 8px;
         }
+
+        
     }
 
     .see-more{

@@ -13,8 +13,12 @@
         border: 2px solid var(--Cinza-Claro, #323131);
         background: linear-gradient(90deg, #484848 0.06%, #181716 100.06%);
         padding: 16px 32px;
-        margin: 0px 16px;
+        margin: 8px 0px;
         align-items: center;
+
+        @include md{
+            margin: 0px 16px;
+        }
 
         .ranking{
             &-number{

@@ -403,7 +403,7 @@
 						var porcentagem = (votos / totalVotos) * 100;
 
 						
-						var newItem = $("<div class='col-4 card-ranking d-flex'>"
+						var newItem = $("<div class='col-10 col-md-3 card-ranking d-flex'>"
                                 + "<h1 class='ranking-number'>#" + (index + 1) + "</h1>"
                                 + "<h1 class='ranking-name'>" + nome + "</h1>"
                                 + "<div class='ranking-percent'>"
