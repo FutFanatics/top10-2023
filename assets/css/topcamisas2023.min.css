@@ -1232,6 +1232,7 @@ p {
 @media (min-width: 1200px) {
   .c-shirt .club_shirt .club_shirt-content {
     flex-direction: column;
+    max-height: 80000px;
   }
 }
 .c-shirt .club_shirt .club_shirt-content.all {
@@ -1248,6 +1249,7 @@ p {
 @media (min-width: 1200px) {
   .c-shirt .selection_shirt .selection_shirt-content {
     flex-direction: column;
+    max-height: 80000px;
   }
 }
 .c-shirt .selection_shirt .selection_shirt-content.all {
@@ -1273,6 +1275,7 @@ p {
 @media (min-width: 1200px) {
   .c-shirt .regional_shirt .regional-shirt-content {
     flex-direction: column;
+    max-height: 800000px;
   }
 }
 .c-shirt .regional_shirt .regional-shirt-content.all {
@@ -1431,6 +1434,11 @@ p {
   font-style: italic;
   font-weight: 700;
   text-decoration: none;
+}
+@media (min-width: 1200px) {
+  .c-shirt .see-more {
+    display: none;
+  }
 }
 
 .c-top {

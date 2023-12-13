@@ -30,6 +30,7 @@
 
             @include md{
                 flex-direction: column;
+                max-height:80000px;
             }
 
 
@@ -49,6 +50,7 @@
 
             @include md{
                 flex-direction: column;
+                max-height:80000px;
             }
 
             &.all{
@@ -78,6 +80,7 @@
 
             @include md{
                 flex-direction: column;
+                max-height: 800000px;
             }
 
             &.all{
@@ -255,5 +258,9 @@
         font-style: italic;
         font-weight: 700;
         text-decoration: none;
+
+        @include md{
+            display: none;
+        }
     }
 }
