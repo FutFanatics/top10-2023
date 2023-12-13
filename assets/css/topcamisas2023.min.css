@@ -2018,6 +2018,11 @@ p {
   display: flex;
   justify-content: center;
 }
+.c-modal-shirt select, .c-modal-vote select {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+}
 
 @font-face {
   font-family: "icons-futfanatics";

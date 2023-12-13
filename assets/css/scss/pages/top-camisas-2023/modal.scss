@@ -216,4 +216,10 @@
         display: flex;
         justify-content: center;
     }
+    
+    select {
+        -webkit-appearance: menulist;
+        -moz-appearance: menulist;
+        appearance: menulist;
+    }
 }
