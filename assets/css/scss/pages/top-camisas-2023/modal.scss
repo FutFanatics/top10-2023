@@ -3,6 +3,115 @@
     @media (min-width: 1200px) { @content; }
 }
 
-.c-modal-shirt{
-    
+.c-modal-shirt, .c-modal-vote {
+    .modal-dialog{
+        max-width: 900px;
+    }
+    .modal-content{
+        height: 512px;
+        position: relative;
+        .close{
+           background-color: #DCB16D;
+           width: 30px;
+           height: 30px;
+           position: absolute;
+           top: 0px;
+           border: none;
+           z-index: 999;
+           right: 0px;
+
+           span{
+               font-family: 'gotham';
+               font-weight: 700;
+               font-size: 20px;
+           }
+        }
+    }
+    .modal-body{
+        background-color: #323131;
+        padding: 0;
+
+        .col-img{
+            padding: 0px;
+        }
+        .col-content{
+            padding: 0px 64px;
+            &_vote{
+                padding: 0px 32px;
+            }
+        }
+        .modal{
+            &-img{
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+            &-title{
+                font-family: 'gotham';
+                font-size: 18px;
+                color: #fff;
+                font-weight: 700;
+                font-style: italic;
+                text-transform: uppercase;
+
+                &_vote{
+                    font-size: 16px;
+                    margin-top: 16px;
+                    text-align: center;
+                }
+                
+            }
+            &-describe{
+                font-family: 'Gotham';
+                font-size: 13px;
+                font-style: normal;
+                color: #fff;
+                font-weight: 400;
+                margin-top:16px;
+                line-height: 1.5rem;
+                margin-bottom: 24px;
+
+                &_vote{
+                    text-align: center;
+                    margin-top: 8px;
+                }
+            }
+            &-button{
+                width: 100%;
+                background-color: #DCB16D;
+                color: #181716;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                height: 50px;
+                font-weight: 650;
+                font-size: 14px;
+
+                &_vote{
+                    height: 45px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &-politica{
+                margin: 8px 0px 16px 0px;
+                color: #939393;
+                font-size: 12px;
+                input{
+                    width: 10px;
+                    height: 10px;
+                }
+                a{
+                    text-decoration: underline;
+                    color: #939393;
+                }
+            }
+        }
+    }
 }

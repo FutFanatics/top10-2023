@@ -1170,11 +1170,18 @@ p {
   display: none;
 }
 .c-shirt .club_shirt.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .c-shirt .club_shirt .club_shirt-content {
   max-height: 600px;
   overflow: hidden;
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .c-shirt .club_shirt .club_shirt-content {
+    flex-direction: column;
+  }
 }
 .c-shirt .club_shirt .club_shirt-content.all {
   max-height: 50000px;
@@ -1185,6 +1192,12 @@ p {
 .c-shirt .selection_shirt .selection_shirt-content {
   max-height: 600px;
   overflow: hidden;
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .c-shirt .selection_shirt .selection_shirt-content {
+    flex-direction: column;
+  }
 }
 .c-shirt .selection_shirt .selection_shirt-content.all {
   max-height: 50000px;
@@ -1200,11 +1213,17 @@ p {
   display: flex;
   flex-direction: column;
 }
-.c-shirt .regional_shirt .selection_shirt-content {
+.c-shirt .regional_shirt .regional-shirt-content {
   max-height: 600px;
   overflow: hidden;
+  display: flex;
 }
-.c-shirt .regional_shirt .selection_shirt-content.all {
+@media (min-width: 1200px) {
+  .c-shirt .regional_shirt .regional-shirt-content {
+    flex-direction: column;
+  }
+}
+.c-shirt .regional_shirt .regional-shirt-content.all {
   max-height: 50000px;
 }
 .c-shirt .box-btn .btn-section {
@@ -1223,12 +1242,18 @@ p {
 }
 .c-shirt .shirt-card {
   padding: 0px;
-  width: 20%;
-  height: 330px;
+  width: 90%;
+  height: 400px;
   position: relative;
   margin-right: 16px;
   overflow: hidden;
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .c-shirt .shirt-card {
+    width: 20%;
+    height: 330px;
+  }
 }
 .c-shirt .shirt-card img {
   width: 100%;
@@ -1253,8 +1278,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100px;
+  height: 50px;
   justify-content: center;
+  padding: 0px 32px;
+}
+@media (min-width: 1200px) {
+  .c-shirt .shirt-content {
+    height: 100px;
+  }
 }
 .c-shirt .shirt-content h1 {
   color: #FFF;
@@ -1263,6 +1294,7 @@ p {
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 .c-shirt .shirt-content a {
   color: #DEA95C;
@@ -1297,7 +1329,7 @@ p {
 }
 
 .c-top {
-  background-color: #222222;
+  background-color: #323131;
   padding: 60px 0px;
 }
 .c-top .box-title {
@@ -1320,15 +1352,24 @@ p {
 .c-top .top-title_continue {
   color: #DEA95C;
 }
-.c-top .slick__top {
-  margin-top: 32px;
-  margin-bottom: 32px;
+.c-top .box-text {
+  margin-bottom: 16px;
 }
-.c-top .slick__top .item {
-  padding: 0px 8px;
+@media (min-width: 1200px) {
+  .c-top .box-text {
+    width: 400px;
+    margin-bottom: 0px;
+  }
 }
-.c-top .slick__top .item .card-top {
+.c-top .box-text p {
+  font-weight: 300;
+  color: #FFF;
+  text-align: center;
+}
+.c-top .card-top {
   height: 400px;
+  margin: 0px;
+  width: 350px;
   border: 1px solid #797979;
   border-radius: 5px;
   background-color: #181716;
@@ -1336,36 +1377,25 @@ p {
   overflow: hidden;
   border-spacing: 12px;
 }
-.c-top .slick__top .item .card-top img {
+@media (min-width: 1200px) {
+  .c-top .card-top {
+    margin: 0px 32px 0px 0px;
+  }
+}
+.c-top .card-top img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
   transform: translateY(-50%);
   top: 50%;
 }
-.c-top .slick__top .item .number-top {
-  background-color: #DCB16D;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 0px;
-  left: 0px;
-}
-.c-top .slick__top .item .number-top h1 {
-  font-weight: 700;
-  color: #000;
-  font-style: italic;
-  font-size: 30px;
-}
 .c-top .vote-top {
-  background-color: transparent;
+  background-color: #DCB16D;
   border: 1px solid #DCB16D;
-  color: #DCB16D;
+  color: #000;
   height: 40px;
-  width: 150px;
+  width: 180px;
   font-size: 17px;
   display: flex;
   justify-content: center;
@@ -1549,16 +1579,31 @@ p {
   background-color: #222222;
   padding: 60px 0px;
 }
+.c-ranking .rest-of-elements div {
+  padding: 0px 2px;
+}
 .c-ranking .card-ranking {
-  border: 2px solid var(--Cinza-Claro, #323131);
-  background: linear-gradient(90deg, #484848 0.06%, #181716 100.06%);
-  padding: 16px 32px;
+  border: 1px solid #323131;
+  background: #181716;
+  padding: 16px 32px !important;
   margin: 8px 0px;
+  height: 300px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.c-ranking .card-ranking.special-style {
+  width: 32.5%;
+  background: linear-gradient(90deg, #484848 0.06%, #181716 100.06%);
+  height: auto;
+  margin: 0px 4px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid var(--Cinza-Claro, #323131);
 }
 @media (min-width: 1200px) {
-  .c-ranking .card-ranking {
-    margin: 0px 16px;
+  .c-ranking .card-ranking.special-style {
+    margin: 0px 4px;
   }
 }
 .c-ranking .card-ranking .ranking-number {
@@ -1570,7 +1615,8 @@ p {
 }
 .c-ranking .card-ranking .ranking-name {
   color: #FFF;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
 }
 .c-ranking .card-ranking .ranking-percent {
   width: 100px;
@@ -1600,6 +1646,108 @@ p {
   transform: translate(-50%, -50%);
   font-size: 18px;
   color: white;
+}
+
+.c-modal-shirt .modal-dialog, .c-modal-vote .modal-dialog {
+  max-width: 900px;
+}
+.c-modal-shirt .modal-content, .c-modal-vote .modal-content {
+  height: 512px;
+  position: relative;
+}
+.c-modal-shirt .modal-content .close, .c-modal-vote .modal-content .close {
+  background-color: #DCB16D;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  border: none;
+  z-index: 999;
+  right: 0px;
+}
+.c-modal-shirt .modal-content .close span, .c-modal-vote .modal-content .close span {
+  font-family: "gotham";
+  font-weight: 700;
+  font-size: 20px;
+}
+.c-modal-shirt .modal-body, .c-modal-vote .modal-body {
+  background-color: #323131;
+  padding: 0;
+}
+.c-modal-shirt .modal-body .col-img, .c-modal-vote .modal-body .col-img {
+  padding: 0px;
+}
+.c-modal-shirt .modal-body .col-content, .c-modal-vote .modal-body .col-content {
+  padding: 0px 64px;
+}
+.c-modal-shirt .modal-body .col-content_vote, .c-modal-vote .modal-body .col-content_vote {
+  padding: 0px 32px;
+}
+.c-modal-shirt .modal-body .modal-img, .c-modal-vote .modal-body .modal-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.c-modal-shirt .modal-body .modal-title, .c-modal-vote .modal-body .modal-title {
+  font-family: "gotham";
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.c-modal-shirt .modal-body .modal-title_vote, .c-modal-vote .modal-body .modal-title_vote {
+  font-size: 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+.c-modal-shirt .modal-body .modal-describe, .c-modal-vote .modal-body .modal-describe {
+  font-family: "Gotham";
+  font-size: 13px;
+  font-style: normal;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 16px;
+  line-height: 1.5rem;
+  margin-bottom: 24px;
+}
+.c-modal-shirt .modal-body .modal-describe_vote, .c-modal-vote .modal-body .modal-describe_vote {
+  text-align: center;
+  margin-top: 8px;
+}
+.c-modal-shirt .modal-body .modal-button, .c-modal-vote .modal-body .modal-button {
+  width: 100%;
+  background-color: #DCB16D;
+  color: #181716;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 50px;
+  font-weight: 650;
+  font-size: 14px;
+}
+.c-modal-shirt .modal-body .modal-button_vote, .c-modal-vote .modal-body .modal-button_vote {
+  height: 45px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.c-modal-shirt .modal-body .modal-button:hover, .c-modal-vote .modal-body .modal-button:hover {
+  text-decoration: none;
+}
+.c-modal-shirt .modal-body .modal-politica, .c-modal-vote .modal-body .modal-politica {
+  margin: 8px 0px 16px 0px;
+  color: #939393;
+  font-size: 12px;
+}
+.c-modal-shirt .modal-body .modal-politica input, .c-modal-vote .modal-body .modal-politica input {
+  width: 10px;
+  height: 10px;
+}
+.c-modal-shirt .modal-body .modal-politica a, .c-modal-vote .modal-body .modal-politica a {
+  text-decoration: underline;
+  color: #939393;
 }
 
 @font-face {
@@ -2049,6 +2197,19 @@ p {
 
 .icon-dray:before {
   content: "\e95e";
+}
+
+.container {
+  padding: 0px 20px;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /*# sourceMappingURL=topcamisas2023.min.css.map */

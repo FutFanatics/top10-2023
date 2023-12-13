@@ -19,12 +19,19 @@
         display:none;
         
         &.active{
-            display: block;
+            display: flex;
+            flex-direction: column;
             
         }
         .club_shirt-content{
             max-height: 600px;
             overflow: hidden;
+            display: flex;
+
+            @include md{
+                flex-direction: column;
+            }
+
 
             &.all{
                 max-height: 50000px;
@@ -38,6 +45,11 @@
         .selection_shirt-content{
             max-height: 600px;
             overflow: hidden;
+            display: flex;
+
+            @include md{
+                flex-direction: column;
+            }
 
             &.all{
                 max-height: 50000px;
@@ -58,9 +70,14 @@
             display: flex;
             flex-direction: column;
         }
-        .selection_shirt-content{
+        .regional-shirt-content{
             max-height: 600px;
             overflow: hidden;
+            display: flex;
+
+            @include md{
+                flex-direction: column;
+            }
 
             &.all{
                 max-height: 50000px;
@@ -88,12 +105,17 @@
     .shirt{
         &-card{
             padding: 0px;
-            width: 20%;
-            height: 330px;
+            width: 90%;
+            height: 400px;
             position: relative;
             margin-right: 16px;
             overflow: hidden;
             cursor: pointer;
+
+            @include md{
+                width: 20%;
+                height: 330px;
+            }
 
             img{
                 width: 100%;
@@ -122,8 +144,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100px;
+            height: 50px;
             justify-content: center;
+            padding: 0px 32px;
+
+            @include md{
+                height: 100px;
+            }
 
             h1{
                 color: $color-text;
@@ -132,6 +159,7 @@
                 font-style: italic;
                 font-weight: 700;
                 text-transform: uppercase;
+                text-align: center;
             }
 
             a{
