@@ -73,6 +73,7 @@
 		$(".shirt-fav").click(function () {
 			var imageUrl = $(this).data("image");
 			var prodName = $(this).data("name"); 
+			var prodId = $(this).data("id"); 
 	
 			var imgElement = $("<img>").addClass("card-image").attr("src", imageUrl);
 	
@@ -84,6 +85,7 @@
 			}
 			
 			$("#voteModal [name='prodName']").val(prodName);
+			$("#voteModal [name='prodId']").val(prodId);
 		});
 	
 		$(".vote-top").click(function () {
