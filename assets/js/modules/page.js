@@ -413,7 +413,7 @@
   }
 
   $(document).ready(function () {
-    var apiUrl = "https://apiinfra.futfanatics.app/board-top10/2022";
+    var apiUrl = "https://apiinfra.futfanatics.app/board-top10/2023";
 
     $.ajax({
       type: "GET",
@@ -638,7 +638,7 @@
         "'Deixe-me ir, preciso andar, estou aqui, a procurar'. O mestre Cartola procurou por muito tempo uma camisa tão linda quanto a camisa III do Tricolor nesta temporada. O manto desenhado pela Umbro é uma homenagem à lenda da música brasileira e encantou torcedores do Brasil inteiro, como Cartola fez e ainda faz com suas canções históricas.",
       preco: "R$ 79,99",
       img: "https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/shirt/umbroFluminenseIII.png",
-      link: "www.futfanatics.com.br",
+      link: "https://www.futfanatics.com.br/",
     },
 
     /* Kappa Bangu III*/
