@@ -66,6 +66,22 @@
     ],
   });
 
+  $('.name-cupom').on('click', function () {
+    var $el = $(this);
+
+    var texto = $el.find('.cupom').text();
+
+    $('.input-transfer').val(texto).select();
+
+    document.execCommand("copy");
+
+
+    $el.addClass('copied');
+    setTimeout(function () {
+        $el.removeClass('copied');
+    }, 3000);
+});
+  
   $(document).ready(function () {
     var currentCardTop = 1;
 
@@ -396,58 +412,6 @@
     return true;
   }
 
-  $(".c-modalVote form").on("submit", function (event) {
-    console.log("clickou");
-    event.preventDefault();
-  
-    var form = $(this);
-    var formData = form.serialize();
-    var url = "https://apiinfra.futfanatics.app/voto-top10";
-  
-    form
-      .find(".msg-resp")
-      .html("")
-      .removeClass("text-success text-danger text-info")
-      .slideUp();
-  
-    if (!form.find("select").val()) {
-      form
-        .find(".msg-resp")
-        .html("Escolha o seu time.")
-        .addClass("text-info")
-        .slideDown();
-      return false;
-    }
-  
-    console.log(formData);
-  
-    $.post(url, formData, function (response) {
-      if (response.status) {
-        form
-            .find(".msg-resp")
-            .html("Boa jogada, e-mail cadastrado com sucesso!")
-            .addClass("text-success")
-            .slideDown();
-    } else {
-        form
-          .find(".msg-resp")
-          .html("Desculpe-nos, ocorreu um erro ao cadastrar.")
-          .addClass("text-danger")
-          .slideDown();
-        console.log("Error form dinamize: " + response.error_msg.result);
-      }
-    }).fail(function (response) {
-      form
-        .find(".msg-resp")
-        .html(response.responseJSON.errorMsg)
-        .addClass("text-danger")
-        .slideDown();
-    });
-  
-    return false;
-  });
-  
-  
   $(document).ready(function () {
     var apiUrl = "https://apiinfra.futfanatics.app/board-top10/2022";
 
@@ -860,6 +824,7 @@
             `);
   }
 
+
   $(".c-modal-vote form").on("submit", function (event) {
     console.log("clickou");
     event.preventDefault();
@@ -898,8 +863,8 @@
           var selected = $(".list-camisas .item.selected");
 
           $("#modal-votar").modal("hide");
-          $(".col-content").addClass("d-none");
-          $(".col-cupom").addClass("active");
+          $(".col-content_vote").addClass("d-none");
+          $(".col-content-cupom").addClass("active");
           $("html, body").animate(
             {
               scrollTop:

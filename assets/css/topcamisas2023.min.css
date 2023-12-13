@@ -1848,6 +1848,10 @@ p {
 }
 .c-modal-shirt .modal-body .col-content_vote, .c-modal-vote .modal-body .col-content_vote {
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 1200px) {
   .c-modal-shirt .modal-body .col-content_vote, .c-modal-vote .modal-body .col-content_vote {
@@ -1856,6 +1860,21 @@ p {
 }
 @media (min-width: 1200px) {
   .c-modal-shirt .modal-body .col-content, .c-modal-vote .modal-body .col-content {
+    padding: 0px 64px;
+  }
+}
+.c-modal-shirt .modal-body .col-content-cupom, .c-modal-vote .modal-body .col-content-cupom {
+  display: none;
+  padding: 32px;
+}
+.c-modal-shirt .modal-body .col-content-cupom.active, .c-modal-vote .modal-body .col-content-cupom.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .c-modal-shirt .modal-body .col-content-cupom, .c-modal-vote .modal-body .col-content-cupom {
     padding: 0px 64px;
   }
 }
@@ -1877,6 +1896,9 @@ p {
   margin-top: 16px;
   text-align: center;
 }
+.c-modal-shirt .modal-body .modal-title_vote strong, .c-modal-vote .modal-body .modal-title_vote strong {
+  font-weight: 700;
+}
 .c-modal-shirt .modal-body .modal-describe, .c-modal-vote .modal-body .modal-describe {
   font-family: "Gotham";
   font-size: 13px;
@@ -1890,6 +1912,16 @@ p {
 .c-modal-shirt .modal-body .modal-describe_vote, .c-modal-vote .modal-body .modal-describe_vote {
   text-align: center;
   margin-top: 8px;
+}
+.c-modal-shirt .modal-body .modal-describe_vote-cupom, .c-modal-vote .modal-body .modal-describe_vote-cupom {
+  margin-bottom: 16px;
+}
+.c-modal-shirt .modal-body .modal-describe_cupom, .c-modal-vote .modal-body .modal-describe_cupom {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #818181;
 }
 .c-modal-shirt .modal-body .modal-button, .c-modal-vote .modal-body .modal-button {
   width: 100%;
@@ -1924,6 +1956,55 @@ p {
 .c-modal-shirt .modal-body .modal-politica a, .c-modal-vote .modal-body .modal-politica a {
   text-decoration: underline;
   color: #939393;
+}
+.c-modal-shirt .modal-body .modal-share-options, .c-modal-vote .modal-body .modal-share-options {
+  margin-top: 16px;
+  display: flex;
+}
+.c-modal-shirt .modal-body .modal-share-options .btn-share, .c-modal-vote .modal-body .modal-share-options .btn-share {
+  width: 50px;
+  height: 50px;
+  margin: 0px 4px;
+  border: #939393 1px solid;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.c-modal-shirt .modal-body .name-cupom, .c-modal-vote .modal-body .name-cupom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  text-decoration: none;
+  font-family: "gotham";
+  color: #FFFFFF;
+  border: 1px #DCB16D solid;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+.c-modal-shirt .modal-body .name-cupom img, .c-modal-vote .modal-body .name-cupom img {
+  margin: 0px 8px;
+}
+.c-modal-shirt .modal-body .name-cupom.copied:before, .c-modal-vote .modal-body .name-cupom.copied:before {
+  content: "Cupom Copiado";
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  top: -20px;
+  background-color: #181716;
+  color: #DCB16D;
+  border: 1px solid #323131;
+  border-radius: 4px;
+  padding: 2px 8px;
+  right: 0;
 }
 
 @font-face {
