@@ -2006,6 +2006,10 @@ p {
   padding: 2px 8px;
   right: 0;
 }
+.c-modal-shirt .msg-resp, .c-modal-vote .msg-resp {
+  display: flex;
+  justify-content: center;
+}
 
 @font-face {
   font-family: "icons-futfanatics";
