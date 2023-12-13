@@ -43,9 +43,9 @@
         }
     }
     .card-top{
-        height: 400px;
+        height: 380px;
         margin: 0px;
-        width: 350px;
+        width: 300px;
         border: 1px solid #797979;
         border-radius: 5px;
         background-color: #181716;
@@ -54,6 +54,8 @@
         border-spacing: 12px;
 
         @include md{
+            height: 400px;
+            width: 350px;
             margin: 0px 32px 0px 0px ;
         }
 

@@ -7,38 +7,55 @@ p{
     margin-bottom: 0px;
 }
 .c-home{
-    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/banner-home.png');
+    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/top-bg-2023_mob.png');
     height: 70vh;
     background-position: center;
     background-size: cover;
-
+    
+    
     @include md{
         padding: 0px;
+        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/banner-home.png');
     }
         
 }
 .c-hour{
     background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/top102023/home/banner-inf.png'), #222222;
-    height: 20vh;
+    height: 40vh;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @include md{
+        height: 20vh;
+    }
+
+
     
     h1{
         color: $color-text;
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: -1px;
         font-style: italic;
-        font-weight: 600;
+        font-weight: 700;
+
+        @include md{
+            font-size: 28px;
+        }
     }
     p{
         color: $color-text;
-        font-size: 16px;
-        font-weight: 300;
+        font-size: 14px;
+        font-weight: 350;
         text-align: center;
+        margin-top: 16px;
+
+        @include md{
+            font-size: 16px;
+            margin-top: 0;
+        }
 
         strong{
             font-weight: 600;

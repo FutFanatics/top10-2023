@@ -8,8 +8,11 @@
         max-width: 900px;
     }
     .modal-content{
-        height: 512px;
         position: relative;
+
+        @include md{
+            height: 512px;
+        }
         .close{
            background-color: #DCB16D;
            width: 30px;
@@ -35,9 +38,16 @@
             padding: 0px;
         }
         .col-content{
-            padding: 0px 64px;
+            padding: 32px 32px;
             &_vote{
-                padding: 0px 32px;
+                padding: 32px;
+
+                @include md{
+                    padding: 0px 32px;
+                }
+            }
+            @include md{
+                padding: 0px 64px;
             }
         }
         .modal{

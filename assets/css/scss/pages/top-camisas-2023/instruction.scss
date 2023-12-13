@@ -4,17 +4,23 @@
 .c-step{
     background-color: #222222; 
     padding: 60px 0px;
-
+    
     .img-step{
-        
+        min-height: 60vh;
+        padding: 0px;
         img{
-           height:  100%;
-            object-fit: contain;
+            height:  100%;
+            object-fit: cover;
             width: auto;
             width: 100%;
+
+            @include md{
+                object-fit: contain;
+            }
         }
     }
     .row{
+        position: relative;
         background-color: #222222  ;
         border: 1px solid #323131;
         justify-content: space-around;
@@ -22,17 +28,34 @@
     .col-content{
         padding: 30px 0px;
         min-height: 60vh;
+        position: absolute;
+        background-color: rgba(00,00,00, 0.6);
+
+        @include md{
+            background-color: transparent;
+            position: relative;
+        }
     }
     h1{
         color: $color-text;
         font-size: 28px;
         letter-spacing: -1px;
         font-style: italic;
+        text-align: center;
         font-weight: 700;
         text-transform: uppercase;
+
+        @include md{
+            text-align: start;
+        }
     }
     
     .slick__step{
+        width: 90%;
+        margin: 0px auto;
+        @include md{
+            width: 100%;
+        }
         .item{
             position: relative;
             padding: 48px 32px 48px 0px;

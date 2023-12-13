@@ -74,6 +74,7 @@
             max-height: 600px;
             overflow: hidden;
             display: flex;
+            transition: ease-in-out 0.5s;
 
             @include md{
                 flex-direction: column;
@@ -81,6 +82,7 @@
 
             &.all{
                 max-height: 50000px;
+                transition: ease-in-out 0.5s;
             }
         }
     }
@@ -93,28 +95,38 @@
             color: $color-text;
             text-transform: uppercase;
             font-weight: 650;
-            font-size: 18px;
+            font-size: 15px;
             letter-spacing: -1px;
             font-style: italic;
-
+            
+            @include md{
+                font-size: 18px;
+            }
             &.active{
                 border-bottom: 1px solid $color-secundary;
+                
+            }
+            &:hover{
+                text-decoration: none;
             }
         }
     }
     .shirt{
         &-card{
             padding: 0px;
-            width: 90%;
-            height: 400px;
+            width: 97%;
+            height: 200px;
             position: relative;
-            margin-right: 16px;
             overflow: hidden;
             cursor: pointer;
+            margin: 0px 8px;
+            margin-bottom: 16px;
 
             @include md{
                 width: 20%;
+                margin:0px 8px !important;
                 height: 330px;
+                margin: 0;
             }
 
             img{
@@ -129,10 +141,6 @@
             &:hover{
                 border: 1px solid #DCB16D;
 
-                img{
-                    transform: scale(1.15);
-                    top: 0%;
-                }
                 
             }
         }
@@ -144,28 +152,37 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 50px;
+            height: 80px;
             justify-content: center;
-            padding: 0px 32px;
+            padding: 16px 16px;
 
             @include md{
                 height: 100px;
+                padding: 0px 32px;
             }
 
             h1{
                 color: $color-text;
-                font-size: 18px;
+                font-size: 13px;
                 letter-spacing: -1px;
                 font-style: italic;
                 font-weight: 700;
                 text-transform: uppercase;
                 text-align: center;
+
+                @include md{
+                    font-size: 18px;
+                }
             }
 
             a{
                 color: $color-text-secundary;
-                font-size: 16px;
+                font-size: 13px;
                 font-weight: 300;
+
+                @include md{
+                    font-size: 16px;                    
+                }
 
                 &:hover{
                     color: $color-text-secundary;
@@ -176,13 +193,52 @@
         }
         &-fav{
             background-color: rgba(18,17,16 , 0.7);
-            width: 25px;
-            height: 25px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             border: none;
             position: absolute;
             top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             right: 8px;
+
+            &.active{
+                background-color: #DCB16D;
+
+                &:hover{
+                    .star{
+                        display: block;
+                    }
+                    .star-hover{
+                        display: none;
+                    }
+                }
+            }
+            .star{
+                width: 20px;
+                height: 20px;
+                object-fit: cover;
+                top: 0px;
+                transform: translateY(0);
+            }
+            .star-hover{
+                display: none;
+                width: 20px;
+                height: 20px;
+                object-fit: cover;
+                top: 0px;
+                transform: translateY(0);
+            }
+            &:hover{
+                .star{
+                    display: none;
+                }
+                .star-hover{
+                    display: block;
+                }
+            }
         }
 
         
@@ -198,5 +254,6 @@
         cursor: pointer;
         font-style: italic;
         font-weight: 700;
+        text-decoration: none;
     }
 }
